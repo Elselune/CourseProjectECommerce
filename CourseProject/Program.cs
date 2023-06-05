@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourseProject
 {
@@ -7,6 +8,16 @@ namespace CourseProject
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
     }
+
+    public class ApplicationContext : DbContext 
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+        }
+    }
+
 }
